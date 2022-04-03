@@ -1,7 +1,8 @@
 # Beats - HTTP output
 
-
 ## Usage
+
+**Download**: [Releases · fufuok/beats-http-output (github.com)](https://github.com/fufuok/beats-http-output/releases)
 
 Beat  | Description
 --- | ---
@@ -14,25 +15,37 @@ Beat  | Description
 [Winlogbeat](https://github.com/elastic/beats/tree/main/winlogbeat) | Fetches and ships Windows Event logs
 [Osquerybeat](https://github.com/elastic/beats/tree/main/x-pack/osquerybeat) | Runs Osquery and manages interraction with it.
 
+**Or**
+
 ```shell
 git clone https://github.com/fufuok/beats-http-output.git
 go mod tidy
 make filebeat
 make metricbeat
+...
 ```
 
-Build all programs:
+**Build all programs**:
 
 ```shell
 make
 ```
 
-Build Windows programs:
+**Build Windows programs**:
 
 ```shell
 cd filebeat
 go build .
 ```
+
+**Build Packetbeat on windows**:
+
+1. `gcc` [tdm-gcc (jmeubank.github.io)](https://jmeubank.github.io/tdm-gcc/)
+2. `pcap` [Npcap: Windows Packet Capture Library & Driver](https://npcap.com/#download)
+   1. Install `Npcap 1.60 installer`
+   2. Unzip `Npcap SDK 1.12 (ZIP)` to `C:\WpdPack`
+3. `go env -w CGO_ENABLED=1`
+4. `cd packetbeat` and `go build .`
 
 ## Acknowledgements
 

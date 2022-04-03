@@ -2,7 +2,7 @@ module github.com/fufuok/beats-http-output
 
 go 1.17
 
-require github.com/elastic/beats/v7 v7.17.1
+require github.com/elastic/beats/v7 v7.17.2
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
