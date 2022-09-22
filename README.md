@@ -145,7 +145,7 @@ The default value is `2048`
 ```yaml
 output.http:
   hosts: ["https://myhost"]
-  batch_publish: true
+  batch_size: 4096
 ```
 
 ##### `compression_level`
