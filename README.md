@@ -20,6 +20,7 @@ Beat  | Description
 ```shell
 git clone https://github.com/fufuok/beats-http-output.git
 go mod tidy
+apt install libpcap-dev
 make filebeat
 make metricbeat
 ...
