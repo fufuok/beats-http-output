@@ -2,7 +2,7 @@ module github.com/fufuok/beats-http-output
 
 go 1.19
 
-require github.com/elastic/beats/v7 v7.17.13
+require github.com/elastic/beats/v7 v7.17.14
 
 require (
 	github.com/Microsoft/go-winio v0.5.2 // indirect
