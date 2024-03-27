@@ -49,28 +49,26 @@ type backoff struct {
 	Max  time.Duration
 }
 
-var (
-	defaultConfig = httpConfig{
-		Protocol:         "",
-		Path:             "",
-		Params:           nil,
-		ProxyURL:         "",
-		Username:         "",
-		Password:         "",
-		BatchPublish:     false,
-		BatchSize:        2048,
-		Timeout:          90 * time.Second,
-		CompressionLevel: 0,
-		TLS:              nil,
-		MaxRetries:       3,
-		LoadBalance:      false,
-		Backoff: backoff{
-			Init: 1 * time.Second,
-			Max:  60 * time.Second,
-		},
-		Format: "json",
-	}
-)
+var defaultConfig = httpConfig{
+	Protocol:         "",
+	Path:             "",
+	Params:           nil,
+	ProxyURL:         "",
+	Username:         "",
+	Password:         "",
+	BatchPublish:     false,
+	BatchSize:        2048,
+	Timeout:          90 * time.Second,
+	CompressionLevel: 0,
+	TLS:              nil,
+	MaxRetries:       3,
+	LoadBalance:      false,
+	Backoff: backoff{
+		Init: 1 * time.Second,
+		Max:  60 * time.Second,
+	},
+	Format: "json",
+}
 
 func (c *httpConfig) Validate() error {
 	if c.ProxyURL != "" {

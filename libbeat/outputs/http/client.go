@@ -246,7 +246,7 @@ func (client *Client) BatchPublishEvent(data []publisher.Event) error {
 	if !client.connected {
 		return ErrNotConnected
 	}
-	var events = make([]eventRaw, len(data))
+	events := make([]eventRaw, len(data))
 	for i, event := range data {
 		events[i] = makeEvent(&event.Content)
 	}

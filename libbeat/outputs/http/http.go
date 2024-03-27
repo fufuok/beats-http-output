@@ -93,7 +93,6 @@ func MakeHTTP(
 			ContentType:      config.ContentType,
 			Format:           config.Format,
 		})
-
 		if err != nil {
 			return outputs.Fail(err)
 		}
